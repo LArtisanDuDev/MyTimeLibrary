@@ -1,6 +1,6 @@
 {
   "name": "MyTimeLibrary",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": "time,esp,esp8266,esp32,espressif8266,espressif32,arduino",
   "description": "Time library to factorize my code",
   "authors":
