@@ -4,10 +4,6 @@
 MyTimeLibrary::MyTimeLibrary()
 {
     _debug = false;
-    for (int i = 0; i < NB_CHANNELS_MAX; i++)
-    {
-        _bestWifiChannels[i] = -1;
-    }
 }
 
 MyTimeLibrary::~MyTimeLibrary()
