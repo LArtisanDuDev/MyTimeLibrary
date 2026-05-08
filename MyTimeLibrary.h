@@ -16,6 +16,6 @@ public:
   
 protected:
   String getDayOfWeekInFrench(int dayOfWeek);
-  String getMonthInFrench(int month)
+  String getMonthInFrench(int month);
   bool _debug;
 };
