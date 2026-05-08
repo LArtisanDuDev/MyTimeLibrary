@@ -48,8 +48,6 @@ String MyTimeLibrary::getFullDateStringAddDelta(bool withTime, int delta)
   return result;
 }
 
-
-
 tm MyTimeLibrary::getTimeWithDelta(int delta)
 {
   struct tm timeinfo;
