@@ -10,6 +10,9 @@ public:
   MyTimeLibrary();
   ~MyTimeLibrary();
   void setDebug(bool debug);
+  String getFullDateStringAddDelta(bool withTime, int delta);
+  tm getTimeWithDelta(int delta);
+
   
 protected:
   String getDayOfWeekInFrench(int dayOfWeek);
