@@ -12,7 +12,8 @@ public:
   void setDebug(bool debug);
   String getFullDateStringAddDelta(bool withTime, int delta);
   tm getTimeWithDelta(int delta);
-
+  String getFullDateStringFromTimeinfo(tm timeinfo, bool withTime);
+  
   
 protected:
   String getDayOfWeekInFrench(int dayOfWeek);

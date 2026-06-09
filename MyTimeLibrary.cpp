@@ -44,6 +44,23 @@ String MyTimeLibrary::getFullDateStringAddDelta(bool withTime, int delta)
   return result;
 }
 
+String MyTimeLibrary::getFullDateStringFromTimeinfo(tm timeinfo, bool withTime)
+{
+  String dayOfWeek = getDayOfWeekInFrench(timeinfo.tm_wday);
+  String month = getMonthInFrench(timeinfo.tm_mon + 1); // tm_mon is months since January - [0,11]
+  char dayBuffer[3];
+  snprintf(dayBuffer, sizeof(dayBuffer), "%02d", timeinfo.tm_mday);
+
+  String result = dayOfWeek + " " + String(dayBuffer) + " " + month;
+  if (withTime)
+  {
+    char timeBuffer[9];
+    snprintf(timeBuffer, sizeof(timeBuffer), "%02d:%02d:%02d", timeinfo.tm_hour, timeinfo.tm_min, timeinfo.tm_sec);
+    result = result + " " + String(timeBuffer);
+  }
+  return result;
+}
+
 tm MyTimeLibrary::getTimeWithDelta(int delta)
 {
   struct tm timeinfo;
