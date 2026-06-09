@@ -17,12 +17,20 @@ void MyTimeLibrary::setDebug(bool debug) {
 String MyTimeLibrary::getDayOfWeekInFrench(int dayOfWeek)
 {
   const char *daysFrench[] = {"Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"};
+  if (_debug) {
+    Serial.print("getDayOfWeekInFrench : ");
+    Serial.println(dayOfWeek);
+  }
   return daysFrench[dayOfWeek % 7]; // Use modulo just in case
 }
 
 String MyTimeLibrary::getMonthInFrench(int month)
 {
   const char *monthsFrench[] = {"Jan", "Fev", "Mar", "Avr", "Mai", "Juin", "Juil", "Aou", "Sep", "Oct", "Nov", "Dec"};
+  if (_debug) {
+    Serial.print("getMonthInFrench : ");
+    Serial.println(month);
+  }
   return monthsFrench[(month - 1) % 12]; // Use modulo and adjust since tm_mon is [0,11]
 }
 
